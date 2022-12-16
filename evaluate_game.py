@@ -56,7 +56,7 @@ if dataset_name.startswith("highD"):
     tracks = np.array([x[:8*5+1,:] for x in tracks])
     pred_length = 7*5+1   
     eval_points = (np.array([1,2,3,4,5,6,7])*25)//5   
-    avgx = np.mean(np.array([np.mean(x[1:,0]-x[0:-1,0]) for x in tracks]))
+    avgx = np.mean(np.array([np.mean(x[1:,0]-x[0:-1,0]) for x in tracks]))  # 这个是做了一些归一化的处理
     scaling = (np.array([1/avgx*3, 1, 1/avgx*3, 1])[None,:])
     tracks = np.array([x*scaling for x in tracks])
     scaling = (1 / scaling)

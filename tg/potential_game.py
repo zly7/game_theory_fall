@@ -24,7 +24,7 @@ import torch
 from torch.autograd import Variable
 import itertools
 import functools
-from torch.optim import sdlbfgs
+# from torch.optim import sdlbfgs
 
 
 
